@@ -4,6 +4,7 @@ import streamlit as st
 from PIL import Image
 from streamlit_option_menu import option_menu
 from utils.uploadAndExample import add_upload
+import json
 
 class MultiApp:
     """Framework for combining multiple streamlit applications.
@@ -66,4 +67,6 @@ class MultiApp:
                             or else you can try a example document', 
                             options = ('Upload Document', 'Try Example'), 
                             horizontal = True)
-        add_upload(choice)
+        with(open('document_store/files.json','r')) as json_file:
+            files = json.load(json_file)
+        add_upload(choice, files)
