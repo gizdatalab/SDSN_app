@@ -67,6 +67,6 @@ class MultiApp:
                             or else you can try a example document', 
                             options = ('Upload Document', 'Try Example'), 
                             horizontal = True)
-        with(open('document_store/files.json','r')) as json_file:
+        with(open('docStore/sample/files.json','r')) as json_file:
             files = json.load(json_file)
         add_upload(choice, files)
