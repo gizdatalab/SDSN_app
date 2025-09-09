@@ -2,7 +2,7 @@ import setuptools
 
 
 install_requires=[
-        "st-annotated-text==4.0.0",
+        "st-annotated-text==4.0.2",
         "markdown==3.4.1",
         "streamlit-aggrid==0.3.4",
         "streamlit_option_menu==0.3.12",
